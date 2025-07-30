@@ -2,7 +2,8 @@ import { GraphQLClient, gql } from 'graphql-request';
 
 async function getContributions(username, year) {
   const endpoint = 'https://api.github.com/graphql';
-  const token = 'REMOVIDO_POR_SEGURANÇA'; // Substitua pelo seu token
+  const token = process.env.GITHUB_TOKEN;
+  if (!token) throw new Error('GITHUB_TOKEN não definido no .env');
   const client = new GraphQLClient(endpoint, {
     headers: {
       Authorization: `Bearer ${token}`,
