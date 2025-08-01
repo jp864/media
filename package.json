@@ -1,7 +1,6 @@
 {
   "name": "github-skyline",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -16,5 +15,7 @@
     "gifencoder": "^2.0.1",
     "graphql-request": "^7.2.0",
     "node-fetch": "^3.3.2"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
