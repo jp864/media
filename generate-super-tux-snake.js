@@ -241,12 +241,12 @@ async function main() {
     ctx.font = 'bold 20px Arial';
     ctx.fillStyle = '#004d40';
     ctx.textAlign = 'left';
-    ctx.fillText(`TESTE: ${elapsedSec}s`, 10, height - 10);
+    ctx.fillText(`Time: ${elapsedSec}s`, 10, height - 10);
 
     // --- Texto: blocos tocados no canto superior direito ---
     const touchedCount = questionBlocks.filter(b => b.hit).length;
     ctx.textAlign = 'right';
-    ctx.fillText(`TESTE: ${touchedCount}`, width - 10, 25);
+    ctx.fillText(`Points: ${touchedCount}`, width - 10, 25);
 
     encoder.addFrame(ctx);
     console.log(`Frame ${step + 1}/${fullPath.length}`);
